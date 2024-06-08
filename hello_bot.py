@@ -1,10 +1,10 @@
 import requests
 
 # Replace 'YOUR_BOT_TOKEN' with your actual bot token
-BOT_TOKEN = '7381031219:AAFwVb54VMFCkz5H1Z6TdF29sMWuXUCmnyI'
+BOT_TOKEN = 'YOUR_BOT_TOKEN'
 
 # Replace 'YOUR_CHANNEL_ID' with your actual channel ID
-CHANNEL_ID = '@aliddpfree'
+CHANNEL_ID = 'YOUR_CHANNEL_ID'
 
 def send_message():
     message = 'Hello from your Telegram bot!'
