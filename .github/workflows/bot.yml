@@ -1,8 +1,7 @@
 name: Send Hello Message
 
 on:
-  schedule:
-    - cron: '*/1 * * * *'  # Run every minute
+  workflow_dispatch:
 
 jobs:
   send-hello:
