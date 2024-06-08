@@ -1,0 +1,27 @@
+name: Send Hello Message
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Run every minute
+
+jobs:
+  send-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install requests library
+      run: pip install requests
+
+    - name: Run bot script
+      run: python hello_bot.py
+      env:
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
